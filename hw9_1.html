@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var y = today.getFullYear();
+        var m = today.getMonth() + 1;
+        var d = today.getDate();
+
+        // 1월부터 12월 까지의 한 달안의 일수를 배열로 만들고, 현재 월 이전까지의 일수를 더하는 방법으로 구했습니다.    
+        var c = new Array (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+        var sum = 0;    
+
+        for (var i=0; i<m-1; i++) {
+            sum = sum + c[i];
+        }
+
+        var ans = sum + d;
+        
+        document.write('오늘은 ' + y + '년 ' + m + '월 ' + d + '일' + '입니다.' + "<br>"+ "<br>"+ "<br>");
+        document.write('올해 '+ '벌써 '+ ans +'일이 ' + '지났습니다.' + "<br>"+ "<br>");
+        
+    </script>
+</body>
+</html>

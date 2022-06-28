@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str1 = prompt("한줄의 문장을 입력하시오. ", "");
+
+        countA = str1.match(/a/gi);
+        
+        document.write("입력: " + str1 + "<br>"+ "<br>"+ "<br>");
+        document.write("출력: " + "<br>"+ "<br>");
+        document.write("문장 = "+ str1 + "<br>"+ "<br>");
+        document.write("길이 = " + str1.length + "<br>"+ "<br>");
+        document.write("a 또는 A의 개수 = " + countA.length + "<br>"+ "<br>");
+        document.write(str1.replace(/a/gi, '*'));
+
+    </script>
+</body>
+</html>

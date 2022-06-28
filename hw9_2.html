@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str1 = prompt("주민등록번호 앞자리 입력: ", "");
+        var str2 = prompt("주민등록번호 뒷자리 입력: ", "");
+
+        var num2 = parseInt(str2.substr(0,1));
+        var month = parseInt(str1.substr(2,2));
+        var date = parseInt(str1.substr(4,2));
+
+        if (num2 == 1) {
+            var year = "19" + str1.substr(0,2);
+
+        }
+        else if(num2 == 2) {
+            var year = "19" + str1.substr(0,2);
+        }
+        
+        else {
+            var year = "20" + str1.substr(0,2);
+        }
+        
+        document.write("주민등록번호 앞자리 입력: " + str1 + "<br>");
+        document.write("주민등록번호 뒷자리 입력: " + str2 + "<br>"+ "<br>"+ "<br>");
+        document.write("생년월일은 다음과 같습니다."+ "<br>"+ "<br>");
+        document.write(year+ "<br>"+ "<br>");
+        document.write(month+ "<br>"+ "<br>");
+        document.write(date+ "<br>"+ "<br>");
+
+    </script>
+</body>
+</html>
